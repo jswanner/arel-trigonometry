@@ -5,6 +5,7 @@ module Arel
     %w[
       Arcsine
       Arctangent
+      Arccosine
       Cosine
       CubeRoot
       Radians

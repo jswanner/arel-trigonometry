@@ -11,6 +11,10 @@ module Arel
         "ATAN(#{visit o.expr})"
       end
 
+      def visit_Arel_Nodes_Arccosine o
+        "ACOS(#{visit o.expr})"
+      end
+
       def visit_Arel_Nodes_Arctangent2 o
         "ATAN2(#{visit o.left}, #{visit o.right})"
       end
