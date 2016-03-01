@@ -13,6 +13,11 @@ shared_examples 'trigonometry examples' do
     specify { expect(result.to_f).to be_within(threshold).of(Math.atan(1)) }
   end
 
+  context 'arccosine' do
+    let(:function) { Arel::Nodes::Arccosine.new(1) }
+    specify { expect(result.to_f).to be_within(threshold).of(Math.acos(1)) }
+  end
+
   context 'arctangent2' do
     let(:function) { Arel::Nodes::Arctangent2.new(1, 2) }
     specify { expect(result.to_f).to be_within(threshold).of(Math.atan2(1, 2)) }
